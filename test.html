@@ -1,150 +1,289 @@
-<span style="font-size:14px;"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html class="legend multi mobile">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>给亲爱的编的</title>
-<meta http-equiv="imagetoolbar" content="no">
-<style type="text/css">
-    html {
-        overflow: hidden;
-    }
-    body {
-        background: #222;
-        width: 100%;
-        height: 100%;
-        cursor: crosshair;
-    }
-    .spanSlide {
-        position: absolute;
-        background: #000;
-        font-size: 1px;
-        overflow: hidden;
-    }
-    .imgSlide {
-        position: absolute;
-        left: 5%;
-        top: 5%;
-        width: 90%;
-        height: 90%;
-        overflow: hidden;
-    }
-    .txtSlide {
-        position: absolute;
-        top: 5%;
-        left: 50px;
-        width:100%;
-        color:#FFF;
-        font-family: arial, helvetica, verdana, sans-serif;
-        font-weight: bold;
-        font-size:96px;
-        letter-spacing:12px;
-        filter: alpha(opacity=70);
-        -moz-opacity:0.7;
-        opacity:0.7;
-    }
-</style>
+    <!-- Thu May 18 2017 01:47:25 GMT+0800 (CST) -->
+    <meta charset="utf-8">
+    <meta name="title" content="卡通浪漫H5表白网页-我要表白网">
+    <title>卡通浪漫H5表白网页-我要表白网</title>
+    <meta id="description" name="description" content="此页面会员可免费制作">
 
-<script type="text/javascript">
+    <meta name="share-icon"
+          content="http://b.hiphotos.baidu.com/fex/pic/item/ac345982b2b7d0a2f53c4158ccef76094a369a7a.jpg">
+    <link rel="shortcut icon"
+          href="http://b.hiphotos.baidu.com/fex/pic/item/ac345982b2b7d0a2f53c4158ccef76094a369a7a.jpg">
 
-var ym=0;
-var ny=0;
-
-createElement = function(container, type, param){
-    o=document.createElement(type);
-    for(var i in param)o[i]=param[i];
-    container.appendChild(o);
-    return o;
-}
-
-mooz = {
-    O:[],
-    /////////
-    mult:6,
-    nbI:5,
-    /////////
-    rwh:0,
-    imgsrc:0,
-    W:0,
-    H:0,
-
-    Xoom:function(N){
-        this.o = createElement(document.getElementById("screen"), "span", {
-            'className':'spanSlide'
-        });
-        img = createElement(this.o, "img", {
-            'className':"imgSlide",
-            'src':mooz.imgsrc[N%mooz.imgsrc.length].src
-        });
-        spa = createElement(this.o, "span", {
-            'className':"imgSlide"
-        });
-        txt = createElement(spa, "span", {
-            'className':"txtSlide",
-            'innerHTML':mooz.imgsrc[N%mooz.imgsrc.length].title
-        });
-        this.N = 10000+N;
-    },
-
-    mainloop:function(){
-        with(this){
-            for(i=0; i<mooz.nbI; i++) {
-                O[i].N += (ym-ny)/8000;
-                N = O[i].N%nbI;
-                ti = Math.pow(mult,N);
-                with(O[i].o.style){
-                    left   = Math.round((W-(ti*rwh))/(W+ti)*(W*.5))+"px";
-                    top    = Math.round((H-ti)/(H+ti)*(H*.5))+"px";
-                    zIndex = Math.round(10000-ti*.1);
-                    width  = Math.round(ti*rwh)+"px";
-                    height = Math.round(ti)+"px";
-                }
-            }
-        }
-        setTimeout("mooz.mainloop();", 16);
-    },
-
-    oigres:function(){
-        with(this){
-            W = parseInt(document.getElementById("screen").style.width);
-            H = parseInt(document.getElementById("screen").style.height);
-            imgsrc = document.getElementById("images").getElementsByTagName("img");
-            rwh = imgsrc[0].width/imgsrc[0].height;
-            for(var i=0;i<nbI;i++) O[i] = new Xoom(i);
-            mainloop();
-        }
-    }
-}
-
-document.onmousemove = function(e){
-    if(window.event) e=window.event;
-    ym = (e.y || e.clientY);
-    if(ym/2>ny)ny=ym/2;
-}
-
-window.onload = function(){
-    ym = ny+50;
-    mooz.oigres();
-}
-
-</script>
-</head>  
-
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache,must-revalidate">
+    <meta http-equiv="expires" content="-1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script type="text/javascript" src="http://hm.baidu.com/hm.js?7ba039077e4ada3e97c58d3dc522a7a6"></script>
+    <script type="text/javascript" src="http://m.baidu.com/static/searchbox/openjs/share.js?v=1.2"></script>
+</head>
 <body>
-<div style="position:absolute;left:50%;top:50%">
-    <div style="position:absolute;width:720px;height:560px;left:-360px;top:-280px;background:#fff"></div>
-    <div style="position:absolute;left:-40px;top:-6px;color:#000;font-family:arial;font-size:0.9em">Lording...</div>
-    <div id="screen" style="position:absolute;width:640px;height:480px;left:-320px;top:-240px;overflow:hidden"></div>
-</div>
 
-<div id="images" style="visibility:hidden">
-    <img title="给" src="11/1.jpg">
-    <img title="你" src="11/2.jpg">
-    <img title="的" src="11/3.jpg">
-    <img title="相" src="11/4.jpg">
-    <img title="册" src="11/5.jpg">
-</div>
+<img src="http://b.hiphotos.baidu.com/fex/pic/item/ac345982b2b7d0a2f53c4158ccef76094a369a7a.jpg" class="lg-icon">
 
+
+<link type="text/css" rel="stylesheet"
+      href="http://fex.bdstatic.com/h5static/h5jscss/726888bab8311ad7b1e03cf6c02162de_iSlider.2.2.1.min.css">
+
+
+<link type="text/css" rel="stylesheet" href="http://fex.bdstatic.com/h5jscss/38a9e58e6fa545879df36e07ac0dfce7.main.css">
+
+<div class="lg-container ready">
+    <div class="lg-back-stage">
+        <div class="lg-backface" style="opacity: 0;"></div>
+        <div class="lg-trailer" style="left: -7px; width: 409px; height: 663px; top: -7px;">
+            <div class="lg-surface lg-surface-image" style="width: 409px; height: 663px;">
+              <img class="lg-component-img" src="http://b.hiphotos.baidu.com/fex/pic/item/1c950a7b02087bf4c7422d2cf5d3572c10dfcf4d.jpg" style="width: 409px; height: 663px; border-style: solid; border-radius: 0px; border-color: black; border-width: 0px;">
+            </div>
+        </div>
+    </div>
+    <div class="lg-page-container">
+        <ul class="islider-outer">
+            <li class=" islider-node islider-prev"
+                style="transform: translateZ(0px) translateY(-711px); visibility: visible; transition: none;"></li>
+            <li class=" islider-node islider-active"
+                style="transform: translateZ(0px) translateY(0px); visibility: visible; transition: -webkit-transform 107.276ms ease;">
+                <div class="lg-page">
+                    <div class="lg-backface" style="background: rgb(255, 255, 255); opacity: 0;"></div>
+                    <div class="lg-trailer rubberBand animated paused"
+                         style="left: 59px; width: 40px; height: 42px; top: 141px; animation-duration: 1s; animation-delay: 0.1s; animation-iteration-count: 1; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 40px; height: 42px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 40px; height: 42px;">
+                                <p><font
+                                        style="font-size:40px; font-family:HappyZcool; color:rgb(255, 0, 128);">献</font>
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer bounce animated paused"
+                         style="left: 60px; width: 162px; height: 162px; top: 289px; animation-duration: 2s; animation-delay: 0.1s; animation-iteration-count: infinite; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-image" style="width: 162px; height: 162px;"><img
+                                class="lg-component-img"
+                                src="http://d.hiphotos.baidu.com/fex/pic/item/30adcbef76094b368fdb6528a4cc7cd98c109dad.jpg"
+                                style="width: 162px; height: 162px; border-style: solid; border-radius: 0px; border-color: black; border-width: 0px;">
+                        </div>
+                    </div>
+                    <div class="lg-trailer pulse animated paused"
+                         style="left: 197px; width: 134px; height: 134px; top: 370px; animation-duration: 2s; animation-delay: 0.1s; animation-iteration-count: infinite; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-image" style="width: 134px; height: 134px;"><img
+                                class="lg-component-img"
+                                src="http://b.hiphotos.baidu.com/fex/pic/item/09fa513d269759eedc0e1e0eb5fb43166c22df9d.jpg"
+                                style="width: 134px; height: 134px; border-style: solid; border-radius: 0px; border-color: black; border-width: 0px;">
+                        </div>
+                    </div>
+                    <div class="lg-trailer pulse animated paused"
+                         style="left: 225px; width: 92px; height: 38px; top: 422px; animation-duration: 2s; animation-delay: 0.1s; animation-iteration-count: infinite; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 92px; height: 38px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 92px; height: 38px;">
+                                <p style="text-align:left;"><span style="color:rgb(255, 255, 255);"><font
+                                        style="font-family:HappyZcool; font-size:24px; text-align: center;">吴宇婷</font></span></p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer rubberBand animated paused"
+                         style="left: 94px; width: 40px; height: 38px; top: 131px; animation-duration: 1s; animation-delay: 0.1s; animation-iteration-count: 1; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 40px; height: 38px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 40px; height: 38px;">
+                                <p><font
+                                        style="font-size:40px; font-family:HappyZcool; color:rgb(255, 0, 128);">给</font>
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer rubberBand animated paused"
+                         style="left: 135px; width: 40px; height: 44px; top: 124px; animation-duration: 1s; animation-delay: 0.1s; animation-iteration-count: 1; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 40px; height: 44px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 40px; height: 44px;">
+                                <p><font
+                                        style="font-size:40px; font-family:HappyZcool; color:rgb(255, 0, 128);">最</font>
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer rubberBand animated paused"
+                         style="left: 175px; width: 40px; height: 38px; top: 122px; animation-duration: 1s; animation-delay: 0.1s; animation-iteration-count: 1; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 40px; height: 38px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 40px; height: 38px;">
+                                <p><font
+                                        style="font-size:40px; font-family:HappyZcool; color:rgb(255, 0, 128);">可</font>
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer rubberBand animated paused"
+                         style="left: 214px; width: 40px; height: 42px; top: 129px; animation-duration: 1s; animation-delay: 0.1s; animation-iteration-count: 1; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 40px; height: 42px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 40px; height: 42px;">
+                                <p><font
+                                        style="font-size:40px; font-family:HappyZcool; color:rgb(255, 0, 128);">爱</font>
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer rubberBand animated paused"
+                         style="left: 253px; width: 40px; height: 35px; top: 132px; animation-duration: 1s; animation-delay: 0.1s; animation-iteration-count: 1; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 40px; height: 35px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 40px; height: 35px;">
+                                <p><font
+                                        style="font-size:40px; font-family:HappyZcool; color:rgb(255, 0, 128);">的</font>
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer rubberBand animated paused"
+                         style="left: 294px; width: 40px; height: 47px; top: 143px; animation-duration: 1s; animation-delay: 0.1s; animation-iteration-count: 1; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 40px; height: 47px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 40px; height: 47px;">
+                                <p><font
+                                        style="font-size:40px; font-family:HappyZcool; color:rgb(255, 0, 128);">你</font>
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer flash animated paused"
+                         style="left: 169px; width: 89px; height: 61px; top: 574px; animation-duration: 3s; animation-delay: 0.1s; animation-iteration-count: infinite; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-panel" style="width: 89px; height: 61px;">
+                            <div class="lg-component-panel" style="width: 89px; height: 61px;">
+                                <div class="lg-trailer flash animated paused"
+                                     style="left: 0px; width: 89px; height: 50px; top: 0px; animation-duration: 2s; animation-delay: 0.6s; animation-iteration-count: infinite; animation-direction: normal;">
+                                    <div class="lg-surface lg-surface-image" style="width: 89px; height: 50px;"><img
+                                            class="lg-component-img"
+                                            src="http://b.hiphotos.baidu.com/fex/pic/item/0b7b02087bf40ad123692e25502c11dfa8ecce63.jpg"
+                                            style="width: 89px; height: 50px; border-style: solid; border-radius: 0px; border-color: black; border-width: 0px;">
+                                    </div>
+                                </div>
+                                <div class="lg-trailer flash animated paused"
+                                     style="left: 9px; width: 72px; height: 39px; top: 22px; animation-duration: 2s; animation-delay: 1.1s; animation-iteration-count: infinite; animation-direction: normal;">
+                                    <div class="lg-surface lg-surface-image" style="width: 72px; height: 39px;"><img
+                                            class="lg-component-img"
+                                            src="http://b.hiphotos.baidu.com/fex/pic/item/0b7b02087bf40ad123692e25502c11dfa8ecce63.jpg"
+                                            style="width: 72px; height: 39px; border-style: solid; border-radius: 0px; border-color: black; border-width: 0px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class=" islider-node islider-next"
+                style="transform: translateZ(0px) translateY(711px); visibility: visible; transition: -webkit-transform 107.276ms ease;">
+                <div class="lg-page">
+                    <div class="lg-backface" style="opacity: 0;"></div>
+                    <div class="lg-trailer pulse animated paused"
+                         style="left: 107px; width: 186px; height: 241px; top: 90px; animation-duration: 1s; animation-delay: 0.1s; animation-iteration-count: 1; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-image" style="width: 186px; height: 241px;"><img
+                                class="lg-component-img"
+                                src="http://a.hiphotos.baidu.com/fex/pic/item/5bafa40f4bfbfbed232c67ba7ff0f736aec31ff9.jpg"
+                                style="width: 186px; height: 241px; border-style: solid; border-radius: 0px; border-color: black; border-width: 0px;">
+                        </div>
+                    </div>
+                    <div class="lg-trailer pulse animated paused"
+                         style="left: 77px; width: 278px; height: 193px; top: 351px; animation-duration: 2s; animation-delay: 3.3s; animation-iteration-count: infinite; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-label" style="width: 278px; height: 193px;">
+                            <div class="lg-component-label"
+                                 style="display: table-cell; vertical-align: top; text-shadow: none; width: 278px; height: 193px;">
+                                <p style="text-align:left;"><font
+                                        style="font-family:HappyZcool; color:rgb(255, 0, 128); font-size:36px;">你是一个活泼可爱的女孩,很善良,很天真</font>
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="lg-trailer flash animated paused"
+                         style="left: 169px; width: 89px; height: 61px; top: 574px; animation-duration: 3s; animation-delay: 0.1s; animation-iteration-count: infinite; animation-direction: normal;">
+                        <div class="lg-surface lg-surface-panel" style="width: 89px; height: 61px;">
+                            <div class="lg-component-panel" style="width: 89px; height: 61px;">
+                                <div class="lg-trailer flash animated paused"
+                                     style="left: 0px; width: 89px; height: 50px; top: 0px; animation-duration: 2s; animation-delay: 0.6s; animation-iteration-count: infinite; animation-direction: normal;">
+                                    <div class="lg-surface lg-surface-image" style="width: 89px; height: 50px;"><img
+                                            class="lg-component-img"
+                                            src="http://b.hiphotos.baidu.com/fex/pic/item/0b7b02087bf40ad123692e25502c11dfa8ecce63.jpg"
+                                            style="width: 89px; height: 50px; border-style: solid; border-radius: 0px; border-color: black; border-width: 0px;">
+                                    </div>
+                                </div>
+                                <div class="lg-trailer flash animated paused"
+                                     style="left: 9px; width: 72px; height: 39px; top: 22px; animation-duration: 2s; animation-delay: 1.1s; animation-iteration-count: infinite; animation-direction: normal;">
+                                    <div class="lg-surface lg-surface-image" style="width: 72px; height: 39px;"><img
+                                            class="lg-component-img"
+                                            src="http://b.hiphotos.baidu.com/fex/pic/item/0b7b02087bf40ad123692e25502c11dfa8ecce63.jpg"
+                                            style="width: 72px; height: 39px; border-style: solid; border-radius: 0px; border-color: black; border-width: 0px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="lg-front-stage">
+        <div class="lg-backface" style="opacity: 0;"></div>
+        <div class="lg-trailer" style="left: 340px; width: 30px; height: 30px; top: 20px;">
+            <div class="lg-surface lg-surface-audio" style="width: 30px; height: 30px;">
+                <div class="lg-component-audio" style="width: 30px; height: 30px;">
+                    <div class="lg-component-audio-play"
+                         style="display: none; background-image: url(&quot;http://hiphotos.baidu.com/doc/pic/item/8ad4b31c8701a18bf9c3b6e69b2f07082838fe6b.jpg&quot;);"></div>
+                    <div class="lg-component-audio-pause"
+                         style="display: block; background-image: url(&quot;http://hiphotos.baidu.com/doc/pic/item/9213b07eca806538df3601ba92dda144ac3482bf.jpg&quot;);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="http://fex.bdstatic.com/h5static/h5jscss/b83d7a78ba26c52504856e7a947371a6_zepto.min.js"></script>
+
+<script src="http://fex.bdstatic.com/h5jscss/257564701f4526475dcf4de11d99b801_iSlider.2.2.1_revise.js"></script>
+
+
+<script src="http://fex.bdstatic.com/h5jscss/4a3c3e0f38e8270d09cb2f0dd261d504.main.js"></script>
+<script src="http://fex.bdstatic.com/h5jscss/2bfa650330c00800743cdc7bdd79c341.data.js"></script>
+<div style="position: absolute; top: -99999px;"><span
+        style="font-family: Microsoft Yahei, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;"></span></div>
+
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://fex.bdstatic.com/h5jscss/aio.js"></script>
+<script src="http://tb1.bdstatic.com/tb/zt/yinyong02/jtb-0.5.0.min.js"></script>
+<script>
+    function _wxCallback(e) {
+        wx.config({
+            appId: e.appId,
+            timestamp: e.timestamp,
+            nonceStr: e.nonceStr,
+            signature: e.signature,
+            jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage"]
+        }), wx.ready(function () {
+            wx.onMenuShareTimeline(window.legend.share.getShareData()), wx.onMenuShareAppMessage(window.legend.share.getShareData())
+        }), wx.error(function (e) {
+            console.log(e)
+        })
+    }
+    !function () {
+        var e = encodeURIComponent(window.location.href.split("#")[0]), n = document.createElement("script");
+        n.src = "http://tieba.baidu.com/n/h5/runtime/api/wx?wxUrl=" + e, n.onerror = function () {
+            window.legend.toast("加载微信签名脚本失败", "error")
+        }, document.body.appendChild(n)
+    }(), function () {
+        window.legend.share.setShareData({
+            title: "卡通浪漫H5表白网页-我要表白网",
+            desc: "此页面会员可免费制作",
+            imgUrl: "http://b.hiphotos.baidu.com/fex/pic/item/ac345982b2b7d0a2f53c4158ccef76094a369a7a.jpg"
+        });
+        var e = window.legend.share.getShareData();
+        window.Box && window.Box.nativeShare({title: e.title, content: e.desc, iconUrl: e.imgUrl, linkUrl: e.link})
+    }();
+</script>
+<script src="http://tieba.baidu.com/n/h5/runtime/api/wx?wxUrl=http%3A%2F%2Fz-z-y.baiduux.com%2Fh5%2Fvipzx.html"></script>
+
+
+<div style="position: absolute; top: -99999px;"><span style="font-family: HappyZcool;"></span></div>
+<audio class="lg-component-audio-core" loop="">
+    <source src="http://boscdn.bpc.baidu.com/v1/legend/1464714024094.514882.暖暖.mp3">
+</audio>
 </body>
-
-</html></span>
+</html>
